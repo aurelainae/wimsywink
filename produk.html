@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wimsy Wink</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        let cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            alert(`${product.name} telah ditambahkan ke keranjang!`);
+            console.log(cart); // Untuk debugging, bisa dihapus nanti
+        }
+    </script>
+</head>
+<body class="bg-pink-100">
+    <header class="bg-pink-600 text-white p-4">
+        <h1 class="text-2xl text-center">Wimsy Wink</h1>
+        <nav>
+            <ul class="flex justify-center space-x-4 mt-2">
+                <li><a href="index.html" class="hover:underline">Beranda</a></li>
+                <li><a href="profil.html" class="hover:underline">Profil</a></li>
+                <li><a href="produk.html" class="hover:underline">Produk</a></li>
+                <li><a href="saran.html" class="hover:underline">Saran</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="p-6">
+        <h2 class="text-xl font-bold">Daftar Produk Makeup</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+            <!-- Produk 1 -->
+            <div class="bg-white p-4 rounded shadow-md">
+                <img src="cushion.jpg" alt="cushion" class="w-300 h-300 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-2">Sometinc cushion hooman 35spf +++</h3>
+                <p class="text-gray-700">HOOMAN Cushion dilengkapi dengan Teknologi Anti-Bakteri Breathable & diformulasikan agar tidak mengoksidasi bahkan setelah dipakai seharian. Dengan Medium to High Coverage yang mampu menyamarkan pori-pori & garis-garis halus dalam satu kali tap.</p>
+                <p class="font-bold mt-2">Rp 190.000</p>
+                <button onclick="addToCart({name: 'Sometinc cushion hooman 35spf +++', price: 80000})" class="mt-4 w-full bg-pink-600 text-white font-bold py-2 rounded hover:bg-pink-700">Tambah ke Keranjang</button>
+            </div>
+            <!-- Produk 2 -->
+            <div class="bg-white p-4 rounded shadow-md">
+                <img src="bedak.png" alt="Foundation" class="w-300 h-300 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-2">Luxcrime Blur & Cover Two Way Cake</h3>
+                <p class="text-gray-700">Luxcrime Blur & Cover Two Way Cake: Oil Control yang secara instan menyamarkan berbagai warna kulit. Diformulasikan untuk mengubah tampilan kulit Anda dengan bedak yang lembut dan fokus untuk menghaluskan dan menutupi ketidaksempurnaan dengan sempurna.</p>
+                <p class="font-bold mt-2">Rp 130.000</p>
+                <button onclick="addToCart({name: 'Luxcrime Blur & Cover Two Way Cake', price: 150000})" class="mt-4 w-full bg-pink-600 text-white font-bold py-2 rounded hover:bg-pink-700">Tambah ke Keranjang</button>
+            </div>
+            <!-- Produk 3 -->
+            <div class="bg-white p-4 rounded shadow-md">
+                <img src="lip cream.jpg" alt="Eyeshadow Palette" class="w-300 h-300 object-cover rounded">
+                <h3 class="text-lg font-semibold mt-2">Wardah Glasting Liquid Lip</h3>
+                <p class="text-gray-700"> Bibir Plump Glass dengan Warna Pigmented yang Nyaman Tidak lengket, ringan dan Transferproof seharian! Didukung oleh teknologi terbaru: GLASSCUSHION dan Ceramide yang melembabkan bibir.</p>
+                <p class="font-bold mt-2">Rp 80.000</p>
+                <button onclick="addToCart({name: 'Wardah Glasting Liquid Lip', price: 80.000})" class="mt-4 w-full bg-pink-600 text-white font-bold py-2 rounded hover:bg-pink-700">Tambah ke Keranjang</button>
+            </div>
+            
+        </div>
+    </main>
+    <footer class="text-center p-4 bg-pink-200">
+        <p>&copy; Whimsywink</p>
+    </footer>
+</body>
+</html>
